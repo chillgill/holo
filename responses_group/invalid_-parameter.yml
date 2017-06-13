@@ -1,0 +1,11 @@
+!response
+id: "invalid_-parameter"
+name: "invalid_<parameter>"
+name: "invalid_<parameter>"
+desc: |
+    The request was malformed. The query parameter 
+    `parameter` contains an invalid value.
+status: 400
+applied_to_all: true
+schema: 
+    $ref: Error model

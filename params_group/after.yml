@@ -1,0 +1,6 @@
+!param
+id: after
+name: after
+desc: "`identifier` of the last entity received. If empty, the `count` first categories are returned."
+schema: 
+    type: string

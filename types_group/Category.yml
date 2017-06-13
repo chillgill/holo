@@ -1,0 +1,14 @@
+!type
+id: Category
+type: object
+properties: 
+    identifier: 
+        type: string
+        examples: 
+            - 
+                example: halloween
+    name: 
+        type: string
+        examples: 
+            - 
+                example: Halloween

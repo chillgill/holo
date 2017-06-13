@@ -1,0 +1,135 @@
+!type
+id: Icon
+type: object
+properties: 
+    raster_sizes: 
+        type: array
+        items: 
+            type: object
+            properties: 
+                size_width: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 30
+                size_height: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 30
+                formats: 
+                    type: array
+                    items: 
+                        $ref: Format
+                size: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 30
+    styles: 
+        type: array
+        items: 
+            $ref: IdAndName
+    tags: 
+        type: array
+        items: 
+            type: string
+        examples: 
+            - 
+                example: interest
+    icon_id: 
+        type: number
+        examples: 
+            - 
+                example: 233366
+    vector_sizes: 
+        type: array
+        items: 
+            type: object
+            properties: 
+                size_width: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 60
+                size_height: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 60
+                formats: 
+                    type: array
+                    items: 
+                        $ref: IdAndName
+                target_sizes: 
+                    type: array
+                    items: 
+                        type: object
+                        properties: 
+                            0: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 30
+                            1: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 60
+                            2: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 120
+                            3: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 180
+                            4: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 240
+                            5: 
+                                type: number
+                                examples: 
+                                    - 
+                                        example: 480
+                size: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 60
+    is_premium: 
+        type: boolean
+        examples: 
+            - 
+                example: true
+    published_at: 
+        type: string
+        examples: 
+            - 
+                example: "2014-01-24T12:00:14.811Z"
+    containers: 
+        type: array
+        items: 
+            $ref: Format
+    prices: 
+        type: array
+        items: 
+            $ref: Price
+    type: 
+        type: string
+        examples: 
+            - 
+                example: vector
+    categories: 
+        type: array
+        items: 
+            $ref: IdAndName
+    temp: 
+        $ref: Test enum
+        desc: test enums
+    primiti: 
+        type: unknown

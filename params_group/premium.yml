@@ -1,0 +1,20 @@
+!param
+id: premium
+name: premium
+desc: "Filter premium icon sets."
+schema: 
+    type: string
+    enum: 
+        - 
+            value: all
+            desc: "or **empty value** Include all icon sets no matter if they are premium or not."
+        - 
+            value: 0
+            desc: |
+                or `false`
+                Only include icon sets that are not premium, ie. may require purchasing a license for specific use cases but are not sold directly on the Iconfinder marketplace.
+        - 
+            value: 1
+            desc: |
+                or `true`
+                Only include premium icon sets, that are sold directly on the Iconfinder marketplace.

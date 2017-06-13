@@ -1,0 +1,77 @@
+!method
+id: "get-details-about-a-specific-icon-set"
+name: Get icon set details
+method: GET
+path: "/iconsets/{icon set id or identifier}"
+path_vars: 
+    - 
+        name: icon set id or identifier
+        required: true
+        schema: 
+            type: string
+            examples: 
+                - 
+                    example: "cat-power-premium"
+desc: "Get details about a specific icon set."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            $ref: Iconset
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/iconsets/cat-power-premium HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "styles": [
+                    {
+                        "identifier": "outline",
+                        "name": "Outline"
+                    }
+                ],
+                "icons_count": 50,
+                "author": {
+                    "username": "webalys",
+                    "user_id": 40097,
+                    "name": "Vincent Le Moign",
+                    "iconsets_count": 74,
+                    "company": "Webalys",
+                    "is_designer": true,
+                    "location": "Hong Kong",
+                    "social_twitter": "webalys",
+                    "social_dribbble": "webalys",
+                    "website_url": "http://www.webalys.com/"
+                },
+                "is_premium": true,
+                "published_at": "2014-05-29T11:38:43.852Z",
+                "prices": [
+                    {
+                        "currency": "USD",
+                        "price": 1,
+                        "license": {
+                            "url": "https://www.iconfinder.com/licenses/basic",
+                            "license_id": 71,
+                            "name": "Basic license",
+                            "scope": "free"
+                        }
+                    }
+                ],
+                "identifier": "coloricons-5",
+                "type": "vector",
+                "iconset_id": 5411,
+                "categories": [
+                    {
+                        "identifier": "outline",
+                        "name": "Outline"
+                    }
+                ],
+                "name": "Coloricons 5"
+            }

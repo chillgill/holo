@@ -1,0 +1,53 @@
+!type
+id: Iconset
+type: object
+properties: 
+    styles: 
+        type: array
+        items: 
+            $ref: IdAndName
+    icons_count: 
+        type: number
+        examples: 
+            - 
+                example: 50
+    author: 
+        $ref: User
+    is_premium: 
+        type: boolean
+        examples: 
+            - 
+                example: true
+    published_at: 
+        type: string
+        examples: 
+            - 
+                example: "2014-05-29T11:38:43.852Z"
+    prices: 
+        type: array
+        items: 
+            $ref: Price
+    identifier: 
+        type: string
+        examples: 
+            - 
+                example: "coloricons-5"
+    type: 
+        type: string
+        examples: 
+            - 
+                example: vector
+    iconset_id: 
+        type: number
+        examples: 
+            - 
+                example: 5411
+    categories: 
+        type: array
+        items: 
+            $ref: IdAndName
+    name: 
+        type: string
+        examples: 
+            - 
+                example: Coloricons 5

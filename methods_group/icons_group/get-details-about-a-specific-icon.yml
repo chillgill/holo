@@ -1,0 +1,108 @@
+!method
+id: "get-details-about-a-specific-icon"
+name: Get icon details
+method: GET
+path: "/icons/{icon id}"
+path_vars: 
+    - 
+        name: icon id
+        required: true
+        schema: 
+            type: string
+desc: "Get details about a specific icon."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            $ref: Icon
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/icons/11 HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "raster_sizes": [
+                    {
+                        "size_width": 30,
+                        "size_height": 30,
+                        "formats": [
+                            {
+                                "preview_url": "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png",
+                                "download_url": "/icons/233366/formats/png/30/download",
+                                "format": "png"
+                            }
+                        ],
+                        "size": 30
+                    }
+                ],
+                "styles": [
+                    {
+                        "identifier": "outline",
+                        "name": "Outline"
+                    }
+                ],
+                "tags": [
+                    ""
+                ],
+                "icon_id": 233366,
+                "vector_sizes": [
+                    {
+                        "size_width": 60,
+                        "size_height": 60,
+                        "formats": [
+                            {
+                                "identifier": "outline",
+                                "name": "Outline"
+                            }
+                        ],
+                        "target_sizes": [
+                            {
+                                "0": 30,
+                                "1": 60,
+                                "2": 120,
+                                "3": 180,
+                                "4": 240,
+                                "5": 480
+                            }
+                        ],
+                        "size": 60
+                    }
+                ],
+                "is_premium": true,
+                "published_at": "2014-01-24T12:00:14.811Z",
+                "containers": [
+                    {
+                        "preview_url": "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png",
+                        "download_url": "/icons/233366/formats/png/30/download",
+                        "format": "png"
+                    }
+                ],
+                "prices": [
+                    {
+                        "currency": "USD",
+                        "price": 1,
+                        "license": {
+                            "url": "https://www.iconfinder.com/licenses/basic",
+                            "license_id": 71,
+                            "name": "Basic license",
+                            "scope": "free"
+                        }
+                    }
+                ],
+                "type": "vector",
+                "categories": [
+                    {
+                        "identifier": "outline",
+                        "name": "Outline"
+                    }
+                ],
+                "temp": "wefwef",
+                "primiti": null
+            }

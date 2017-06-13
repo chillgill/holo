@@ -1,0 +1,25 @@
+!method
+id: "list-an-authenticated-user-s-icon-sets"
+name: "List an authenticated user's icon sets"
+traits: 
+    - Search
+method: GET
+path: /user/iconsets
+desc: "List all public icon sets owned by the authenticated user in descending order of when they were published."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: array
+            items: 
+                $ref: Iconset
+        envelope: IconSet Envelope
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/user/iconsets HTTP/1.1 
+            
+            HTTP/1.1 200 OK

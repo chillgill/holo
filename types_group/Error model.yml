@@ -1,0 +1,14 @@
+!type
+id: Error model
+type: object
+properties: 
+    code: 
+        type: string
+        examples: 
+            - 
+                example: not_found
+    message: 
+        type: string
+        examples: 
+            - 
+                example: Not found

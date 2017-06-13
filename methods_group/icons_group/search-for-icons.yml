@@ -1,0 +1,166 @@
+!method
+id: "search-for-icons"
+name: Search for icons
+traits: 
+    - Search
+method: POST
+path: /icons/search
+desc: "Search through icons by various criteria. The returned list of icons is ordered descendingly by popularity."
+request: 
+    params: 
+        - 
+            name: query
+            desc: Search query
+            required: true
+            schema: 
+                type: string
+                examples: 
+                    - 
+                        example: facebook
+        - 
+            name: offset
+            desc: "Result offset. Starts from 0, resulting in the first count icons being returned."
+            schema: 
+                type: number
+                min: 0.0
+                examples: 
+                    - 
+                        example: 1
+        - 
+            name: size_minimum
+            desc: "Minimum icon size to include in search result."
+            schema: 
+                type: number
+                default: 0
+                examples: 
+                    - 
+                        example: 24
+        - 
+            name: size_maximum
+            desc: "Maximum icon size to include in search result."
+            schema: 
+                type: number
+                default: 512
+        - 
+            name: category
+            desc: icon category
+            schema: 
+                type: string
+                examples: 
+                    - 
+                        example: internet
+        - 
+            name: style
+            desc: icon style
+            schema: 
+                type: string
+                examples: 
+                    - 
+                        example: contemporary
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: object
+            properties: 
+                total_count: 
+                    type: string
+                    examples: 
+                        - 
+                            example: 442
+                icons: 
+                    $ref: Icon
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            POST https://api.iconfinder.com/v2/icons/search?query=facebook HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "total_count": "442",
+                "icons": {
+                    "raster_sizes": [
+                        {
+                            "size_width": 30,
+                            "size_height": 30,
+                            "formats": [
+                                {
+                                    "preview_url": "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png",
+                                    "download_url": "/icons/233366/formats/png/30/download",
+                                    "format": "png"
+                                }
+                            ],
+                            "size": 30
+                        }
+                    ],
+                    "styles": [
+                        {
+                            "identifier": "outline",
+                            "name": "Outline"
+                        }
+                    ],
+                    "tags": [
+                        ""
+                    ],
+                    "icon_id": 233366,
+                    "vector_sizes": [
+                        {
+                            "size_width": 60,
+                            "size_height": 60,
+                            "formats": [
+                                {
+                                    "identifier": "outline",
+                                    "name": "Outline"
+                                }
+                            ],
+                            "target_sizes": [
+                                {
+                                    "0": 30,
+                                    "1": 60,
+                                    "2": 120,
+                                    "3": 180,
+                                    "4": 240,
+                                    "5": 480
+                                }
+                            ],
+                            "size": 60
+                        }
+                    ],
+                    "is_premium": true,
+                    "published_at": "2014-01-24T12:00:14.811Z",
+                    "containers": [
+                        {
+                            "preview_url": "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png",
+                            "download_url": "/icons/233366/formats/png/30/download",
+                            "format": "png"
+                        }
+                    ],
+                    "prices": [
+                        {
+                            "currency": "USD",
+                            "price": 1,
+                            "license": {
+                                "url": "https://www.iconfinder.com/licenses/basic",
+                                "license_id": 71,
+                                "name": "Basic license",
+                                "scope": "free"
+                            }
+                        }
+                    ],
+                    "type": "vector",
+                    "categories": [
+                        {
+                            "identifier": "outline",
+                            "name": "Outline"
+                        }
+                    ],
+                    "temp": "wefwef",
+                    "primiti": null
+                }
+            }

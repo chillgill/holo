@@ -1,0 +1,89 @@
+!method
+id: "list-all-styles"
+name: List all styles
+method: GET
+path: /styles
+desc: "List all styles sorted ascendingly by their identifier."
+request: 
+    params: 
+        - 
+            $ref: count
+        - 
+            $ref: after
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: object
+            properties: 
+                styles: 
+                    type: object
+                    properties: 
+                        identifier: 
+                            type: string
+                            examples: 
+                                - 
+                                    example: 3d
+                        name: 
+                            type: string
+                            examples: 
+                                - 
+                                    example: 3D
+                total_count: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 9
+examples: 
+    - 
+        name: List styles
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/styles HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "styles": [
+                    {
+                        "identifier": "3d",
+                        "name": "3D"
+                    },
+                    {
+                        "identifier": "cartoon",
+                        "name": "Cartoon"
+                    },
+                    {
+                        "identifier": "flat",
+                        "name": "Flat"
+                    },
+                    {
+                        "identifier": "glyph",
+                        "name": "Glyph"
+                    },
+                    {
+                        "identifier": "handdrawn",
+                        "name": "Handdrawn"
+                    },
+                    {
+                        "identifier": "outline",
+                        "name": "Outline"
+                    },
+                    {
+                        "identifier": "photorealistic",
+                        "name": "Photorealistic"
+                    },
+                    {
+                        "identifier": "pixel",
+                        "name": "Pixel"
+                    },
+                    {
+                        "identifier": "smooth",
+                        "name": "Smooth"
+                    }
+                ],
+                "total_count": 9
+            }

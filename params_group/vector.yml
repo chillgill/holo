@@ -1,0 +1,22 @@
+!param
+id: vector
+name: vector
+desc: "Filter vector icon sets."
+schema: 
+    type: string
+    enum: 
+        - 
+            value: all
+            desc: |
+                or **empty value**
+                Include all icon sets no matter if they are vector or raster icon sets.
+        - 
+            value: 0
+            desc: |
+                or `false`
+                Only include raster icon sets in the result.
+        - 
+            value: 1
+            desc: |
+                `1` or `true`
+                Only include vector icon sets in the result.

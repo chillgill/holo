@@ -1,0 +1,44 @@
+!method
+id: "get-style-details"
+name: Get style details
+method: GET
+path: "/styles/{style identifier}"
+path_vars: 
+    - 
+        name: style identifier
+        required: true
+        schema: 
+            type: string
+desc: "Get details about a specific style identified by its `identifier`."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: object
+            properties: 
+                identifier: 
+                    type: string
+                    examples: 
+                        - 
+                            example: flat
+                name: 
+                    type: string
+                    examples: 
+                        - 
+                            example: Flat
+examples: 
+    - 
+        name: Get flat style details
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/styles/flat HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+              "identifier" : "flat",
+              "name" : "Flat"
+            }

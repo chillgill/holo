@@ -1,0 +1,26 @@
+!method
+id: "list-an-author-s-icon-sets"
+name: "List an author's icon sets"
+traits: 
+    - Search
+method: GET
+path: "/authors/{author id}/iconsets"
+path_vars: 
+    - 
+        name: author id
+        required: true
+        schema: 
+            type: string
+            examples: 
+                - 
+                    example: 611
+desc: "List all public icon sets owned by a specific author in descending order of when they were published."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: array
+            items: 
+                $ref: Iconset
+        envelope: IconSet Envelope

@@ -1,0 +1,55 @@
+!type
+id: User
+type: object
+desc: "[See docs](doc://Data transmission sdfwef)"
+properties: 
+    username: 
+        type: string
+        examples: 
+            - 
+                example: webalys
+    user_id: 
+        type: number
+        examples: 
+            - 
+                example: 40097
+    name: 
+        type: string
+        examples: 
+            - 
+                example: Vincent Le Moign
+    iconsets_count: 
+        type: number
+        examples: 
+            - 
+                example: 74
+    company: 
+        type: string
+        examples: 
+            - 
+                example: Webalys
+    is_designer: 
+        type: boolean
+        examples: 
+            - 
+                example: true
+    location: 
+        type: string
+        examples: 
+            - 
+                example: Hong Kong
+    social_twitter: 
+        type: string
+        examples: 
+            - 
+                example: webalys
+    social_dribbble: 
+        type: string
+        examples: 
+            - 
+                example: webalys
+    website_url: 
+        type: string
+        examples: 
+            - 
+                example: "http://www.webalys.com/"

@@ -1,0 +1,15 @@
+!type
+id: IdAndName
+type: object
+desc: "Name - Description pair"
+properties: 
+    identifier: 
+        type: string
+        examples: 
+            - 
+                example: outline
+    name: 
+        type: string
+        examples: 
+            - 
+                example: Outline

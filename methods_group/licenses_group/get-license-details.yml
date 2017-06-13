@@ -1,0 +1,35 @@
+!method
+id: "get-license-details"
+name: Get license details
+method: GET
+path: "/licenses/{license id}"
+path_vars: 
+    - 
+        name: license id
+        required: true
+        schema: 
+            type: string
+desc: "Get details about a specific license by its unique ID."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            $ref: License
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/licenses/71 HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "url": "https://www.iconfinder.com/licenses/basic",
+                "license_id": 71,
+                "name": "Basic license",
+                "scope": "free"
+            }

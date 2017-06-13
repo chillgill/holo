@@ -1,0 +1,23 @@
+!method
+id: "list-icon-sets-of-a-specific-style"
+name: List icon sets of a specific style
+traits: 
+    - Search
+method: GET
+path: "/styles/{style identifier}/iconsets"
+path_vars: 
+    - 
+        name: style identifier
+        required: true
+        schema: 
+            type: string
+desc: "List public icon sets of a specific style in descending order of when they were published."
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: array
+            items: 
+                $ref: Iconset
+        envelope: IconSet Envelope

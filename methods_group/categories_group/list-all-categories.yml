@@ -1,0 +1,50 @@
+!method
+id: "list-all-categories"
+name: List all categories
+method: GET
+path: /categories
+desc: "List all categories sorted ascendingly by their `identifier`."
+request: 
+    params: 
+        - 
+            $ref: count
+        - 
+            $ref: after
+responses: 
+    - 
+        name: OK
+        status: 200
+        schema: 
+            type: object
+            properties: 
+                total_count: 
+                    type: number
+                    examples: 
+                        - 
+                            example: 40
+                categories: 
+                    $ref: Category
+examples: 
+    - 
+        name: Example
+        lang: http
+        example: |
+            GET https://api.iconfinder.com/v2/categories?count=2 HTTP/1.1 
+            
+            HTTP/1.1 200 OK 
+            
+            Content-Type: application/json
+            
+            {
+                "total_count": 40,
+                "categories": [
+                    {
+                        "identifier": "abstract",
+                        "name": "Abstract"
+                    },
+                    {
+                        "identifier": "animal",
+                        "name": "Animals"
+                    }
+                ]
+            }

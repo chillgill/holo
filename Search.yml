@@ -1,0 +1,13 @@
+!trait
+id: Search
+params: 
+    - 
+        $ref: count
+    - 
+        $ref: after
+    - 
+        $ref: premium
+    - 
+        $ref: vector
+    - 
+        $ref: license

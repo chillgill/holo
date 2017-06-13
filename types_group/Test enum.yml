@@ -1,0 +1,8 @@
+!type
+id: Test enum
+type: string
+desc: ewfwef
+enum: 
+    - 
+        value: wefwef
+        desc: "_value_ sescription!&#10;"

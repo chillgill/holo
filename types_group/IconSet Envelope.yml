@@ -1,0 +1,11 @@
+!type
+id: IconSet Envelope
+type: object
+desc: Response wrapper object
+properties: 
+    total_count: 
+        type: string
+    iconsets: 
+        type: object
+        format: data_container
+        desc: Data container

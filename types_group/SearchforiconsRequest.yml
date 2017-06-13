@@ -1,0 +1,77 @@
+!type
+id: SearchforiconsRequest
+type: object
+desc: ewf
+properties: 
+    coordinates: 
+        type: unknown
+    favorited: 
+        type: boolean
+        examples: 
+            - 
+                example: false
+    truncated: 
+        type: boolean
+        examples: 
+            - 
+                example: false
+    created_at: 
+        type: string
+        examples: 
+            - 
+                example: "Wed Aug 29 17:12:58 +0000 2012"
+    id_str: 
+        type: string
+        examples: 
+            - 
+                example: 240859602684612608
+    entities: 
+        type: unknown
+    in_reply_to_user_id_str: 
+        type: unknown
+    contributors: 
+        type: unknown
+    text: 
+        type: string
+        examples: 
+            - 
+                example: "Introducing the Twitter Certified Products Program: https://t.co/MjJ8xAnT"
+    retweet_count: 
+        type: number
+        examples: 
+            - 
+                example: 121
+    in_reply_to_status_id_str: 
+        type: unknown
+    id: 
+        type: number
+        examples: 
+            - 
+                example: 240859602684612600
+    geo: 
+        type: unknown
+    retweeted: 
+        type: boolean
+        examples: 
+            - 
+                example: false
+    possibly_sensitive: 
+        type: boolean
+        examples: 
+            - 
+                example: false
+    in_reply_to_user_id: 
+        type: unknown
+    place: 
+        type: unknown
+    user: 
+        type: unknown
+    in_reply_to_screen_name: 
+        type: unknown
+    source: 
+        type: string
+        examples: 
+            - 
+                example: '<a href="http://sites.google.com/site/yorufukurou/" rel="nofollow">YoruFukurou</a>'
+    in_reply_to_status_id: 
+        type: unknown
