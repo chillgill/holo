@@ -1,11 +1,11 @@
 !response
-id: "invalid_-parameter"
-name: "invalid_<parameter>"
-name: "invalid_<parameter>"
-desc: |
-    The request was malformed. The query parameter 
-    `parameter` contains an invalid value.
-status: 400
+id: authorization_denied
+name: Authorization denied
+name: Authorization denied
+desc: "Authorization has been deined for this request."
+status: 401
 applied_to_all: true
 schema: 
     $ref: Error model
+content_types: 
+    - application/xml

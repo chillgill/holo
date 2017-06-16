@@ -1,11 +1,22 @@
-base_url: "https://api.iconfinder.com/v2"
+base_url: "http://baseuri.com"
 index: 
     items: 
         - 
-            id: params_group
+            id: docs_group
             items: 
                 - 
-                    id: count
+                    id: overview
+                - 
+                    id: prerequisites
+                - 
+                    id: apilicense
+                - 
+                    id: "http-request-methods"
+                - 
+                    id: "http-status-codes"
+        - 
+            id: params_group
+            items: 
                 - 
                     id: after
                 - 
@@ -13,26 +24,7 @@ index:
                 - 
                     id: vector
                 - 
-                    id: license
-        - 
-            id: docs_group
-            items: 
-                - 
-                    id: overview
-                - 
-                    id: "http-request-methods"
-                - 
-                    id: "data-transmission"
-                - 
-                    id: "http-status-codes"
-                - 
-                    id: pagination
-                - 
-                    id: "rate-limiting"
-                - 
-                    id: "conditional-requests"
-                - 
-                    id: "cross-origin-resource-sharing-cors"
+                    id: count
         - 
             id: methods_group
             items: 
@@ -40,85 +32,28 @@ index:
                     id: authentication_group
                     items: 
                         - 
-                            id: "begin-the-authorization-flow"
-                        - 
                             id: "obtain-access-token"
-                        - 
-                            id: "json-web-token"
                 - 
                     id: authors_group
                     items: 
                         - 
-                            id: "get-author-details"
-                - 
-                    id: categories_group
-                    items: 
+                            id: "get-item-details"
                         - 
-                            id: "list-all-categories"
-                        - 
-                            id: "get-category-details"
+                            id: "get-item-schema"
                 - 
                     id: icons_group
                     items: 
                         - 
-                            id: "list-all-icons-in-an-icon-set"
-                        - 
-                            id: "get-details-about-a-specific-icon"
-                        - 
-                            id: "search-for-icons"
-                - 
-                    id: "icon-sets_group"
-                    items: 
-                        - 
-                            id: "list-all-public-icon-sets"
-                        - 
-                            id: "list-icon-sets-of-a-specific-style"
-                        - 
-                            id: "list-icon-sets-in-a-category"
-                        - 
-                            id: "list-a-user-s-icon-sets"
-                        - 
-                            id: "list-an-author-s-icon-sets"
-                        - 
-                            id: "list-an-authenticated-user-s-icon-sets"
-                        - 
-                            id: "get-details-about-a-specific-icon-set"
-                - 
-                    id: licenses_group
-                    items: 
-                        - 
-                            id: "get-license-details"
-                - 
-                    id: styles_group
-                    items: 
-                        - 
-                            id: "list-all-styles"
-                        - 
-                            id: "get-style-details"
-                - 
-                    id: users_group
-                    items: 
-                        - 
-                            id: "get-user-details"
+                            id: "list-items-of-a-specified-type"
         - 
             id: responses_group
             items: 
                 - 
-                    id: bad_request
+                    id: unauthorized
                 - 
-                    id: "invalid_-parameter"
+                    id: authorization_denied
                 - 
-                    id: bad_credentials
-                - 
-                    id: permission_denied
-                - 
-                    id: insufficient_permissions
-                - 
-                    id: not_purchased
-                - 
-                    id: not_found
-                - 
-                    id: rate_limit_exceeded
+                    id: invalid_model
                 - 
                     id: server_error
         - 
@@ -152,3 +87,27 @@ index:
                     id: Test enum
         - 
             id: Search
+        - 
+            id: "list-all-categories"
+        - 
+            id: "list-all-public-icon-sets"
+        - 
+            id: "list-icon-sets-of-a-specific-style"
+        - 
+            id: "list-icon-sets-in-a-category"
+        - 
+            id: "list-a-user-s-icon-sets"
+        - 
+            id: "list-an-author-s-icon-sets"
+        - 
+            id: "list-an-authenticated-user-s-icon-sets"
+        - 
+            id: "get-details-about-a-specific-icon-set"
+        - 
+            id: "get-license-details"
+        - 
+            id: "list-all-styles"
+        - 
+            id: "get-style-details"
+        - 
+            id: "get-user-details"

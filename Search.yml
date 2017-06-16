@@ -9,5 +9,3 @@ params:
         $ref: premium
     - 
         $ref: vector
-    - 
-        $ref: license

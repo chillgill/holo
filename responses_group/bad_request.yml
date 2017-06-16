@@ -1,15 +1,9 @@
 !response
-id: bad_request
-name: bad_request
-desc: "The request was malformed."
+id: unauthorized
+name: Unauthorized
+name: Unauthorized
+desc: "Authorization has been denied for this request. User host address (IP) mismatch."
 status: 400
 applied_to_all: true
-schema: 
-    $ref: Error model
-examples: 
-    - 
-        example: |
-            {
-                "code": "bad_request",
-                "message": "The request was malformed."
-            }
+content_types: 
+    - application/xml

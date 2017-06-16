@@ -1,0 +1,29 @@
+!method
+id: "get-item-details"
+name: Get item schema using library model uuid
+method: GET
+path: "/{server_url}/api/{model_choice}/{model_guid}/items/schema"
+path_vars: 
+    - 
+        name: server_url
+        desc: "Modelpedia server URL. e.g. http://www.modelpedia.com.au"
+        required: true
+        schema: 
+            type: string
+    - 
+        name: model_choice
+        desc: "Specifies if you want to retreive the draft, proposed or final version of the library. (e.g., LatestDraft, LatestProposed or LatestFinal)"
+        required: true
+        schema: 
+            type: string
+    - 
+        name: model_guid
+        desc: "The published model uuid. (i.e. the uuid of the specific library version.)"
+        required: true
+        schema: 
+            type: string
+desc: "This is to query the schema of a library using the model_guid. When using the library UUID, you are required to provide the model choice. (i.e. LatestDraft, LatestProposed otr LatestFinal)"
+responses: 
+    - 
+        name: OK
+        status: 200

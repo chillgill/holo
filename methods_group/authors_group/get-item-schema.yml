@@ -1,0 +1,19 @@
+!method
+id: "get-item-schema"
+name: Get item schema using specific model version
+method: GET
+path: "/{server_url}/api/{model_guid}/items/schema"
+path_vars: 
+    - 
+        name: server_url
+        desc: "Modelpedia server URL. (e.g., http://www.modelpedia.com.au)"
+        required: true
+        schema: 
+            type: string
+    - 
+        name: model_guid
+        desc: "The UUID of the published model library."
+        required: true
+        schema: 
+            type: string
+desc: "This is used to query the items schema when you provide the UUID of the specific published model library."

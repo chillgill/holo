@@ -1,9 +1,8 @@
 !param
 id: count
-name: count
-desc: "Number of icon sets to include in the result."
+name: "$count"
+name: "$count"
+desc: "This is a paging option, to limit the amount of the data returned."
 schema: 
-    type: integer
-    default: 100
-    min: 1.0
-    max: 100.0
+    type: boolean
+    default: true

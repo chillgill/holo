@@ -1,15 +1,36 @@
 !method
 id: "list-all-categories"
-name: List all categories
+name: List items of a specified type
 method: GET
-path: /categories
-desc: "List all categories sorted ascendingly by their `identifier`."
+path: "/{server_url}/api/{model_guid}/items?$filter=isof('{item_type}')"
+path_vars: 
+    - 
+        name: server_url
+        required: true
+        schema: 
+            type: string
+    - 
+        name: model_guid
+        required: true
+        schema: 
+            type: string
+desc: |
+    This API request will retreive all items relating to the specified item type. The item type can be filtered out using the $filter paramater and the 'isOf' option. 
+    e.g., filter=isof('Business Rule') will list out all items that are listed under item type 'Business Rule'.
 request: 
     params: 
         - 
-            $ref: count
+            name: top
+            desc: "This is a paging option to return the specified number of items from the top of the list."
+            schema: 
+                type: integer
         - 
-            $ref: after
+            name: skip
+            desc: This is a paging option to skip the specified number of items in the list
+            schema: 
+                type: integer
+        - 
+            $ref: count
 responses: 
     - 
         name: OK

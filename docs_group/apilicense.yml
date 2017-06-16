@@ -1,0 +1,7 @@
+!doc
+id: apilicense
+name: License
+content: |
+    A separate API license key is required to be installed before a model is available over API.
+    
+    API callers are required to be an authorised Modelpedia users and therefore follow standard subscription licensing model.

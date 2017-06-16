@@ -1,6 +1,12 @@
 !param
 id: after
-name: after
-desc: "`identifier` of the last entity received. If empty, the `count` first categories are returned."
+name: "$filter"
+name: "$filter"
+desc: "Filter out the item type using the 'isOf' option. Only the 'isOf' option is supported for item type checking."
 schema: 
     type: string
+    examples: 
+        - 
+            example: "$filter=isof('BusinessRule')"
+        - 
+            example: "$filter=isof('TextNote')"

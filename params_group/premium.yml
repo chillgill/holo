@@ -1,20 +1,9 @@
 !param
 id: premium
-name: premium
-desc: "Filter premium icon sets."
+name: "$top"
+name: "$top"
+desc: |
+    This is a paging option to return the specified number of items from the top of the list. 
+    e.g. $top=50 will return the first 50 items in the list.
 schema: 
-    type: string
-    enum: 
-        - 
-            value: all
-            desc: "or **empty value** Include all icon sets no matter if they are premium or not."
-        - 
-            value: 0
-            desc: |
-                or `false`
-                Only include icon sets that are not premium, ie. may require purchasing a license for specific use cases but are not sold directly on the Iconfinder marketplace.
-        - 
-            value: 1
-            desc: |
-                or `true`
-                Only include premium icon sets, that are sold directly on the Iconfinder marketplace.
+    type: integer

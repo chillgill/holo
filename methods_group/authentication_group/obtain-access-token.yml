@@ -1,44 +1,43 @@
 !method
 id: "obtain-access-token"
 name: Obtain access token
-method: GET
-path: /oauth2/token
-desc: "Once you have the intermediate code, it must be exchanged for an access token that will be used for all authenticated requests. Access tokens are obtained at the following URL:"
+method: POST
+path: "/{server_url}/api/token"
+path_vars: 
+    - 
+        name: server_url
+        desc: "URL of the Modelpedia server. (e.g. http://modelpedia.com.au)"
+        required: true
+        schema: 
+            type: string
+desc: "Prior to making any API requests, you need to obtain an access token that will be used for all subsequent API requests."
 request: 
     params: 
         - 
-            name: client_id
-            desc: "Your application's client ID."
-            required: true
-            schema: 
-                type: string
-        - 
-            name: client_secret
-            desc: "Your application's client secret."
-            required: true
-            schema: 
-                type: string
-        - 
-            name: code
-            desc: |
-                The intermediate code received from Iconfinder.
-                The result of [Begin the authorization flow](//cool)
-            required: true
-            schema: 
-                type: string
-        - 
             name: grant_type
-            desc: "Grant type. Must be authorization_code to indicate that the token is granted based on an `authorization code`."
+            desc: "Use the value 'password' since you will be obtaining an access token using the your password credentials."
             required: true
             schema: 
                 type: string
-                examples: 
-                    - 
-                        example: authorization code
+        - 
+            name: username
+            desc: "The account username for which you want to obtain an access token."
+            required: true
+            schema: 
+                type: string
+        - 
+            name: password
+            desc: "The account password for which you want to obtain an access token."
+            required: true
+            schema: 
+                type: string
+    body: 
+        content_types: 
+            - application/xml
 responses: 
     - 
         name: OK
-        desc: "pon successful exchange of the intermediate code, Iconfinder returns a JSON response with the access token and token type issued. Access tokens are guaranteed to be alphanumerical strings of 64 byte lengths:"
+        desc: "Upon successful submission of the API request, an XML response will be returned with the access token, token type issued and expiry time in milliseconds."
         status: 200
         schema: 
             type: object

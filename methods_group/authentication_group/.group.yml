@@ -2,12 +2,10 @@
 id: authentication_group
 name: Authentication
 desc: |
-    The Iconfinder API 2.0 offers both a public and a private part of the API. The public part includes the basic functionality, one would experience as a user of Iconfinder without being logged in. The private part of the API includes access to user information, purchases etc. depending on the authorization scope.
+    Holocentric BMS uses OAuth for the service authentication. This authentication mechanism requires an initial call to authenticate the API user based on the user name and password provided, and will then return an access token. This access token has a default expirt time of 8 hours. The API user must be a licensed user with the System Authority role 'API Client (Full Read)' assigned in order to be able to authenticate with the service. This user will have access to all mapped properties of the service.
     
-    There are currently two ways to authenticate. Using a JSON Web Token or using authorization code. Using the web token will allow you to hide the API access from your users - this will require that your account is on an API subscription plan. The authorization code approach lets your users authenticate using their own Iconfinder accounts.
+    The token that is received can then be used for subsequent API requests. 
     
-    In order to use OAuth 2.0, you need to [register an API application](https://www.iconfinder.com/account/applications), which will be assigned a unique client ID and client secret.
-    
-    Once you have registered your application, you need to authorize users to be able to access the Iconfinder API version 2.0 as the specific user. The authorization flow between your application and Iconfinder depends on the type of application you’re developing.
-    
-    > It is very important that the client secret is not shared with anyone. When developing an application that uses OAuth 2.0 you should also make sure to use a strong, unique password for your Iconfinder account.
+    > Please note the following:
+    > - Tokens must not be shared; only the requesting IP address can use the token provided.
+    > - Subsequent requests for a token within the 8 hour expiry period will not expire existing valid tokens.

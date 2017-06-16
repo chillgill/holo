@@ -1,8 +1,0 @@
-!response
-id: rate_limit_exceeded
-name: rate_limit_exceeded
-desc: "API request rate limit exceeded. See `rate limiting`."
-status: 429
-applied_to_all: true
-schema: 
-    $ref: Error model

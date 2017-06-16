@@ -1,0 +1,110 @@
+!method
+id: "list-items-of-a-specified-type"
+name: List items of a specified type
+method: GET
+path: "/{server_url}/api/{model_guid}/items?$filter=isof('{item_type}')"
+path_vars: 
+    - 
+        name: server_url
+        required: true
+        schema: 
+            type: string
+    - 
+        name: model_guid
+        required: true
+        schema: 
+            type: string
+desc: |
+    This API request will retreive all items relating to the specified item type. The item type can be filtered out using the $filter paramater and the 'isOf' option. 
+    e.g., filter=isof('Business Rule') will list out all items that are listed under item type 'Business Rule'.
+request: 
+    params: 
+        - 
+            name: top
+            schema: 
+                type: integer
+        - 
+            name: skip
+            schema: 
+                type: integer
+        - 
+            name: count
+            schema: 
+                type: boolean
+examples: 
+    - 
+        name: Example 1
+        lang: http
+        example: |
+            GET https://uat-313.holocentric.com/api/LatestDraft/{F43EC40F-B1EC-41DE-A59A-8E19705666D7}/items?$filter=isof('Branch')
+            
+            Content-Type: application/xml
+            
+            200 OK
+            
+            <?xml version="1.0" encoding="utf-8"?>
+            <items xsi:schemaLocation="https://uat-313.holocentric.com/api/{FA404B82-C6AF-4AD2-B029-9FFEFBB959FD}/items/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Branch>
+                    <uuid>{0C1BACCE-3F97-475C-90EE-7E1E99BCD732}</uuid>
+                    <title>Branch - Octal Ocelot</title>
+                    <name>Branch - Octal Ocelot</name>
+                    <aliases>
+                        <value>Octal Ocelot</value>
+                    </aliases>
+                    <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+                    <memberPositions>
+                        <PositionInstance refUuid="{31C7D04E-9E7C-4871-877A-1D8834E165A7}" />
+                    </memberPositions>
+                    <organisedBy>
+                        <Division refUuid="{7224D4CF-5988-4C9D-89A7-514047C3C55D}" />
+                    </organisedBy>
+                </Branch>
+                <Branch>
+                    <uuid>{1FDA8AF5-0F73-49EE-97C8-EF78DDA8C9DD}</uuid>
+                    <title>Branch - Monal Vast</title>
+                    <name>Branch - Monal Vast</name>
+                    <aliases>
+                        <value>Monal Vast</value>
+                    </aliases>
+                    <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+                    <organisedBy>
+                        <Division refUuid="{7224D4CF-5988-4C9D-89A7-514047C3C55D}" />
+                    </organisedBy>
+                </Branch>
+                <Branch>
+                    <uuid>{2C8952F6-C1FA-4BC1-B101-D5183A20353C}</uuid>
+                    <title>Branch - Eel Chinchilla</title>
+                    <name>Branch - Eel Chinchilla</name>
+                    <aliases>
+                        <value>Eel Chinchilla</value>
+                    </aliases>
+                    <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+                    <responsibleForReleaseOf>
+                        <InformationAsset refUuid="{7F5F3BD5-2A7A-4A01-A61D-750D73468EC8}" />
+                    </responsibleForReleaseOf>
+                </Branch>
+                <Branch>
+                    <uuid>{373596B5-3817-4EA0-BAD6-D030356F9A11}</uuid>
+                    <title>Branch - Newt Bellicose</title>
+                    <name>Branch - Newt Bellicose</name>
+                    <aliases>
+                        <value>Newt Bellicose</value>
+                    </aliases>
+                    <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+                    <responsibleForReleaseOf>
+                        <InformationAsset refUuid="{B58EA090-62E1-4968-B7B8-480329C6F6AB}" />
+                    </responsibleForReleaseOf>
+                </Branch>
+                <Branch>
+                    <uuid>{39D54441-DD44-48B1-9962-8E9B477ACBAE}</uuid>
+                    <title>Branch - Karmic Iguanodon</title>
+                    <name>Branch - Karmic Iguanodon</name>
+                    <aliases>
+                        <value>Karmic Iguanodon</value>
+                    </aliases>
+                    <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+                    <organisedBy>
+                        <Division refUuid="{7224D4CF-5988-4C9D-89A7-514047C3C55D}" />
+                    </organisedBy>
+                </Branch>
+            </items>

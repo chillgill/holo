@@ -1,22 +1,7 @@
 !param
 id: vector
-name: vector
-desc: "Filter vector icon sets."
+name: "$skip"
+name: "$skip"
+desc: "This is a paging option to skip the specified number of items in the list. e.g. $skip=50 will skip the first 50 items in the list and return results from the 51st item onwards."
 schema: 
-    type: string
-    enum: 
-        - 
-            value: all
-            desc: |
-                or **empty value**
-                Include all icon sets no matter if they are vector or raster icon sets.
-        - 
-            value: 0
-            desc: |
-                or `false`
-                Only include raster icon sets in the result.
-        - 
-            value: 1
-            desc: |
-                `1` or `true`
-                Only include vector icon sets in the result.
+    type: integer
